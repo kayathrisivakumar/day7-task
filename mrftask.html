@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 1. Get all the countries from Asia continent /region using Filter function
+       var request = new XMLHttpRequest()
+        request.open("GET", "https://restcountries.com/v3.1/all")
+        request.send()
+        request.onload = function () {
+            console.log("page loaded")
+            var data = JSON.parse(request.response)
+            console.log(data)
+            // var asiacountries = data.filter((element) =>element.region==="Asia").map((element)=>element.name)
+            // console.log(asiacountries)
+        
+// 2. Get all the countries with a population of less than 2 lakhs using Filter function
+
+            // var populationcountries = data.filter((element)=>element.population<200000).map((element)=>element.name)
+            // console.log(populationcountries)
+
+// 3.Print the following details name, capital, flag using forEach function
+
+           //data.forEach(element=>console.log(element.flag));
+           //data.forEach(element=>console.log(element.capital));
+           //data.forEach(element=>console.log(element.name));             
+
+
+// 4. Print the total population of countries using reduce function
+
+        //   var population=data.map((element)=>element.population)
+
+        //   var totalpopulation=population.reduce((acc,cv)=>acc+cv,0)
+
+        //   console.log(population)
+        //   console.log(totalpopulation)
+
+// 5.Print the country which uses US Dollars as currency.
+
+ 
+
+    // var usdfilter= data.filter((element) => element.currencies.USD) 
+    // var datas = usdfilter.map((element) => element.name);
+    // console.log(usdfilter);
+    // console.log(datas);       
+
+
+}    
+        
+
+
+
+    </script>
+</body>
+</html>
